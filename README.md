@@ -5,7 +5,6 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?logo=postgresql&logoColor=white)](https://supabase.com/)
 [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0%20Async-D71F00?logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
 [![Gemini](https://img.shields.io/badge/Gemini%20AI-Multimodal-886CE4?logo=googlegemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
-[![Tests](https://img.shields.io/badge/Tests-110%20Passed-1E8449?logo=pytest&logoColor=white)](https://docs.pytest.org/)
 [![SIH 2026](https://img.shields.io/badge/SIH-2026-1E8449)](https://www.sih.gov.in/)
 [![Production Live](https://img.shields.io/badge/Production-Live%20VPS-007ACC)](https://bis.hizru.me/docs)
 
@@ -94,9 +93,6 @@ Parakh/
 ├── scripts/
 │   ├── generate_guide_pdf.py     # 7-page ReportLab PDF integration documentation generator
 │   └── seed_data.py              # Full database seeder for standards, QCOs, labs, jewellers, and schemes
-├── tests/
-│   ├── integration/              # End-to-end API integration tests
-│   └── unit/                     # Business logic, proximity sorting, and PII scrubber tests
 ├── docs/                         # Architecture specifications and implementation plans
 └── requirements.txt              # Production dependency manifest
 ```
@@ -114,7 +110,6 @@ Parakh/
 | **AI & NLP** | Google Gemini (`gemini-3.7-flash-high` / `gemini-3-flash`), CloudCode OAuth 24/7 headless manager |
 | **Geospatial & Math** | Pure Python Haversine Formula with floating-point boundary clamping |
 | **Privacy & Security** | DPDP Act (2023) Regex Sanitizer, PBKDF2-HMAC-SHA256, JWT (`python-jose`), API Key Guards |
-| **Testing** | Pytest, Pytest-Asyncio, HTTPX (`110/110` passing tests) |
 | **Documentation** | Swagger / OpenAPI 3.1, ReportLab PDF Engine |
 
 ---
@@ -177,13 +172,6 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 Once running, interactive API documentation is available at `http://127.0.0.1:8000/docs`.
-
-### 5. Running the Test Suite
-
-```bash
-pytest -v
-```
-*(All 110 automated unit and integration tests will execute and pass)*.
 
 ---
 
